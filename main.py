@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from tensorflow.keras import datasets
 from tensorflow.keras import layers
 from tensorflow.keras import models
+from tkinter import *
+from tkinter import filedialog
 
 
 dataset_path = r'C:\Users\User\Desktop\Dataset\Images'
@@ -91,3 +93,19 @@ def create_model():
     print(f"Final Validation Accuracy: {val_accuracy}")
 
 load_model()
+
+
+def say_hi():
+    print('hi')
+
+
+root = Tk()
+root.title("UI TEST")
+
+test_button = Button(root, text="AHH BUTTON", command=say_hi)
+test_button.pack(pady=10)
+
+test_label = Label(root, text="LABELLABEL")
+test_label.pack(pady=10)
+
+root.mainloop()
