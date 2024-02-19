@@ -18,13 +18,16 @@ from PyQt5.QtGui import QPixmap, QImage
 
 filepaths = []
 current_image_index = 0
+image_index = 0
 total_images = 0
-input_folder = ""
+input_folder = r'C:\Users\User\Desktop\Animals'
 output_folder = ""
 dataset_path = r'C:\Users\User\Desktop\Dataset\Images'
 images = []
 labels = []
 class_names = []
+image_data_list = []
+model = models.load_model('image_classifier.model')
 
 
 class MyGui(QMainWindow):
@@ -38,12 +41,21 @@ class MyGui(QMainWindow):
         self.imageStatus.setText("0/0")
         self.thumbnailStatus.setText("0/0")
         self.scanProgressBar.setValue(0)
-
+        self.load_images_labels()
         self.outputFolderButton.clicked.connect(self.say)
         self.loadImageButton.clicked.connect(self.load_images_from_folder)
-        self.scanImagesButton.clicked.connect(self.say)
+        self.scanImagesButton.clicked.connect(self.scan_images)
         self.prevImageButton.clicked.connect(self.prev_image)
         self.nextImageButton.clicked.connect(self.next_image)
+
+    def create_image_info(self, image_no, classification, confidence_score, file_location):
+        image_info = {
+            "image_no": image_no,
+            "classification": classification,
+            "confidence_score": confidence_score,
+            "file_location": file_location
+        }
+        return image_info
 
     def say(self):
         print("Hey")
@@ -60,12 +72,13 @@ class MyGui(QMainWindow):
             if filepaths:
                 total_images = len(filepaths)
                 print(f"Total images: {total_images}")
-                self.display_image()
             else:
                 print("No images in selected folder")
 
     def next_image(self):
         global current_image_index
+        global image_data_list
+        print(image_data_list[0]["classification"])
         current_image_index = (current_image_index + 1) % len(filepaths)
         self.display_image()
 
@@ -75,7 +88,12 @@ class MyGui(QMainWindow):
         self.display_image()
 
     def display_image(self):
+        print(current_image_index)
         self.imageStatus.setText(str(current_image_index+1)+"/"+str(total_images))
+        self.imageClass.setText(f'Classification: {image_data_list[current_image_index]["classification"]}')
+        self.imageConfidence.setText(f'Confidence: {image_data_list[current_image_index]["confidence_score"]}')
+        self.imageLocation.setText(f'File Location: {image_data_list[current_image_index]["file_location"]}')
+
         if filepaths and current_image_index < len(filepaths):
             image_original = Image.open(filepaths[current_image_index])
             image_original.thumbnail((256, 256))
@@ -112,12 +130,15 @@ class MyGui(QMainWindow):
         class_names = ['Cat', 'Dog']
 
     def load_model(self):
-
+        global model
         model = models.load_model('image_classifier.model')
-
+    def scan_images(self):
+        global image_index
+        global image_data_list
         folder_path = r'C:\Users\User\Desktop\Animals'
         for filename in os.listdir(folder_path):
             if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.png'):
+                image_index = image_index + 1
                 img_path = os.path.join(folder_path, filename)
                 img = cv.imread(img_path)
                 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
@@ -132,8 +153,12 @@ class MyGui(QMainWindow):
                 # get the max probability of the class probabilities; aka of our predicted class
                 confidence_score = np.max(prediction)
 
-                print(f'Prediction: {class_names[index]}, Confidence Score: {confidence_score}')
+                image = self.create_image_info(image_index, class_names[index], confidence_score, img_path)
+                image_data_list.append(image)
+                print(image)
 
+                print(f'Prediction: {class_names[index]}, Confidence Score: {confidence_score}')
+            self.display_image()
     def create_model(self):
         print("Creating Model....")
         model = models.Sequential()
@@ -175,9 +200,9 @@ class MyGui(QMainWindow):
 
 app = QApplication([])
 window = MyGui()
+window.load_model()  # Call load_model before accessing image_data_list
 app.exec_()
-window.load_images_labels()
-window.load_model()
+
 
 
 
