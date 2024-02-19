@@ -21,6 +21,10 @@ current_image_index = 0
 total_images = 0
 input_folder = ""
 output_folder = ""
+dataset_path = r'C:\Users\User\Desktop\Dataset\Images'
+images = []
+labels = []
+class_names = []
 
 
 class MyGui(QMainWindow):
@@ -86,99 +90,94 @@ class MyGui(QMainWindow):
         else:
             print("No image to display or index out of range")
 
+    def load_images_labels(self):
+        global dataset_path
+        global images
+        global labels
+        global class_names
 
-def load_model():
-    dataset_path = r'C:\Users\User\Desktop\Dataset\Images'
+        # create labels for images by folder
+        for label, category in enumerate(['Cats', 'Dogs']):
+            category_path = os.path.join(dataset_path, category)
+            for image_name in os.listdir(category_path):
+                image_path = os.path.join(category_path, image_name)
+                # Load and resize the image to 32x32
+                image = cv.imread(image_path)
+                image = cv.resize(image, (32, 32))
+                images.append(image)
+                labels.append(label)  # Assign label 0 for cats and label 1 for dogs
 
-    images = []
-    labels = []
+        images = np.array(images) / 255
+        labels = np.array(labels)
+        class_names = ['Cat', 'Dog']
 
-    for label, category in enumerate(['Cats', 'Dogs']):
-        category_path = os.path.join(dataset_path, category)
-        for image_name in os.listdir(category_path):
-            image_path = os.path.join(category_path, image_name)
-            # Load and resize the image to 32x32
-            image = cv.imread(image_path)
-            image = cv.resize(image, (32, 32))
-            images.append(image)
-            labels.append(label)  # Assign label 0 for cats and label 1 for dogs
+    def load_model(self):
 
-    # Convert lists to NumPy arrays
-    images = np.array(images)
-    labels = np.array(labels)
+        model = models.load_model('image_classifier.model')
 
-    images = images / 255
+        folder_path = r'C:\Users\User\Desktop\Animals'
+        for filename in os.listdir(folder_path):
+            if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.png'):
+                img_path = os.path.join(folder_path, filename)
+                img = cv.imread(img_path)
+                img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+                img = cv.resize(img, (32, 32))
 
-    # defining out identifiable categories
-    class_names = ['Cat', 'Dog']
-    model = models.load_model('image_classifier.model')
+                plt.imshow(img, cmap=plt.cm.binary)
 
-    folder_path = r'C:\Users\User\Desktop\Animals'
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.png'):
-            img_path = os.path.join(folder_path, filename)
-            img = cv.imread(img_path)
-            img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-            img = cv.resize(img, (32, 32))
+                # obtain class probabilities
+                prediction = model.predict(np.array([img]) / 255)
+                # get index for prediction
+                index = np.argmax(prediction)
+                # get the max probability of the class probabilities; aka of our predicted class
+                confidence_score = np.max(prediction)
 
-            plt.imshow(img, cmap=plt.cm.binary)
+                print(f'Prediction: {class_names[index]}, Confidence Score: {confidence_score}')
 
-            # obtain class probabilities
-            prediction = model.predict(np.array([img]) / 255)
-            # get index for prediction
-            index = np.argmax(prediction)
-            # get the max probability of the class probabilities; aka of our predicted class
-            confidence_score = np.max(prediction)
+    def create_model(self):
+        print("Creating Model....")
+        model = models.Sequential()
+        model.add(layers.Conv2D(32, (3,3), activation="relu", input_shape=(32, 32, 3)))
+        model.add(layers.MaxPooling2D((2,2)))
+        model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+        model.add(layers.MaxPooling2D((2, 2)))
+        model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+        model.add(layers.Flatten())
+        model.add(layers.Dense(64, activation='relu'))
+        model.add(layers.Dense(2, activation='softmax'))
 
-            print(f'Prediction: {class_names[index]}, Confidence Score: {confidence_score}')
+        model.compile(optimizer='adam',loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
+        # Use a validation split of 0.2 (20% of the data)
+        history = model.fit(images, labels, epochs=10, validation_split=0.2)
 
-def create_model():
-    print("Creating Model....")
-    model = models.Sequential()
-    model.add(layers.Conv2D(32, (3,3), activation="relu", input_shape=(32, 32, 3)))
-    model.add(layers.MaxPooling2D((2,2)))
-    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    model.add(layers.MaxPooling2D((2, 2)))
-    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    model.add(layers.Flatten())
-    model.add(layers.Dense(64, activation='relu'))
-    model.add(layers.Dense(2, activation='softmax'))
+        # Get the loss and accuracy metrics from the training process
+        train_loss = history.history['loss'][-1]
+        train_accuracy = history.history['accuracy'][-1]
 
-    model.compile(optimizer='adam',loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+        # Get the loss and accuracy metrics from the validation process
+        val_loss = history.history['val_loss'][-1]
+        val_accuracy = history.history['val_accuracy'][-1]
 
-    # Use a validation split of 0.2 (20% of the data)
-    history = model.fit(images, labels, epochs=10, validation_split=0.2)
+        # lower is better
+        print(f"Final Training Loss: {train_loss}")
+        # higher is better
+        print(f"Final Training Accuracy: {train_accuracy}")
+        # lower is better
+        print(f"Final Validation Loss: {val_loss}")
+        # higher is better
+        print(f"Final Validation Accuracy: {val_accuracy}")
 
-    # Get the loss and accuracy metrics from the training process
-    train_loss = history.history['loss'][-1]
-    train_accuracy = history.history['accuracy'][-1]
-
-    # Get the loss and accuracy metrics from the validation process
-    val_loss = history.history['val_loss'][-1]
-    val_accuracy = history.history['val_accuracy'][-1]
-
-    # lower is better
-    print(f"Final Training Loss: {train_loss}")
-    # higher is better
-    print(f"Final Training Accuracy: {train_accuracy}")
-    # lower is better
-    print(f"Final Validation Loss: {val_loss}")
-    # higher is better
-    print(f"Final Validation Accuracy: {val_accuracy}")
-
-
-def close_program():
-    # make sure to change this later; you dont want to close the program mid process ...
-    sys.exit(0)
+    def close_program(self):
+        # make sure to change this later; you dont want to close the program mid process ...
+        sys.exit(0)
 
 
 app = QApplication([])
 window = MyGui()
 app.exec_()
-
-load_model()
-
+window.load_images_labels()
+window.load_model()
 
 
 
