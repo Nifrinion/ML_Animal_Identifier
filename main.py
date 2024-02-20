@@ -12,7 +12,7 @@ from tkinter import ttk
 from tkinter import filedialog
 from PIL import ImageTk, Image
 from PyQt5.QtWidgets import *
-from PyQt5 import uic, QtGui
+from PyQt5 import uic,  QtGui
 from PyQt5.QtGui import QPixmap, QImage
 
 
