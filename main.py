@@ -10,7 +10,7 @@ import tkinter as tk
 from tkinter import filedialog
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtGui
-from PyQt5.QtGui import QPixmap, QImage
+from PyQt5.QtGui import QPixmap, QImage, QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import time
 from PIL import ImageTk, Image
@@ -39,6 +39,9 @@ class MyGui(QMainWindow):
 
         self.closeEvent = self.close_program
 
+
+        self.setWindowIcon(QIcon('cat.jpg'))
+        self.setWindowTitle("ML Animal Identifier")
         self.imageStatus.setText("0/0")
         self.thumbnailStatus.setText("0/0")
         self.outputEntry.setText(output_folder)
@@ -47,6 +50,7 @@ class MyGui(QMainWindow):
         self.outputFolderButton.clicked.connect(self.load_output_folder)
         self.loadImageButton.clicked.connect(self.load_images_from_folder)
         self.scanImagesButton.clicked.connect(self.scan_images)
+        self.imageSlider.valueChanged.connect(self.adjust_image)
 
         global progress_bar
         progress_bar = QProgressBar()
@@ -91,18 +95,15 @@ class MyGui(QMainWindow):
                 total_images = len(filepaths)
                 print(f"Total images: {total_images}")
                 self.scanImagesButton.setEnabled(True)
+                self.imageSlider.setMaximum(total_images)
             else:
                 print("No images in selected folder")
 
-    def next_image(self):
+    def adjust_image(self):
         global current_image_index
-        current_image_index = (current_image_index + 1) % len(filepaths)
+        current_image_index = self.imageSlider.value() - 1
         self.display_image()
 
-    def prev_image(self):
-        global current_image_index
-        current_image_index = (current_image_index - 1) % len(filepaths)
-        self.display_image()
 
     def display_image(self):
         print(current_image_index)
@@ -113,11 +114,11 @@ class MyGui(QMainWindow):
         self.imageStatus.setText(str(current_image_index+1)+"/"+str(total_images))
         self.imageClass.setText(f'Classification: {image_data_list[current_image_index]["classification"]}')
         self.imageConfidence.setText(f'Confidence: {image_data_list[current_image_index]["confidence_score"]}')
-        self.imageLocation.setText(f'File Location: {image_data_list[current_image_index]["file_location"]}')
+        self.imageLocation.setText(f'File: {image_data_list[current_image_index]["file_location"]}')
 
         self.thumbnailStatus.setText(str(image_index)+"/"+str(total_images))
         self.thumbnailClass.setText(f'Classification: {image_data_list[image_index-1]["classification"]}')
-        #self.thumbnailConfidence.setText(f'Confidence: {image_data_list[image_index]["confidence_score"]}')
+        self.thumbnailConfidence.setText(f'Confidence: {image_data_list[image_index-1]["confidence_score"]}')
 
         if filepaths and current_image_index < len(filepaths):
             image_scan = Image.open(filepaths[image_index-1])
@@ -135,7 +136,7 @@ class MyGui(QMainWindow):
             self.scanThumbnailImageLabel.setPixmap(pixmap_scan)
 
             image_original = Image.open(filepaths[current_image_index])
-            image_original.thumbnail((360, 360))
+            image_original.thumbnail((260, 260))
             # convert image to byte array for the QPixmap
             image_byte_array = image_original.convert("RGBA").tobytes("raw", "RGBA")
             pixmap = QtGui.QPixmap.fromImage(
@@ -180,12 +181,27 @@ class MyGui(QMainWindow):
         global input_folder
         global output_folder
         global class_names
+
+        # Toggle button text and enable/disable group boxes
+        if self.scanImagesButton.text() == "Stop":
+            # If the button text is "Stop", change it to "Scan" to indicate stopping the scanning process
+            self.scanImagesButton.setText("Scan")
+            self.imageScannerGroupbox.setEnabled(False)
+            self.imageInputGroupbox.setEnabled(False)
+            self.imageViewerGroupbox.setEnabled(False)
+            return  # Exit the function to stop scanning
+
         if class_names:
             for class_name in class_names:
-                class_folder = os.path. join(output_folder, class_name)
+                class_folder = os.path.join(output_folder, class_name)
                 os.makedirs(class_folder, exist_ok=True)
                 print(f"Created folder: {class_folder}")
+
         folder_path = input_folder
+        self.imageScannerGroupbox.setEnabled(True)
+        self.imageInputGroupbox.setEnabled(True)
+        self.scanImagesButton.setText("Stop")
+
         for filename in os.listdir(folder_path):
             if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.png'):
                 image_index = image_index + 1
@@ -212,10 +228,18 @@ class MyGui(QMainWindow):
 
                 self.display_image()
 
-                # Pause for a short duration to observe the image (optional)
                 time.sleep(.01)
-                # Allow the event loop to process GUI events
+                # allows for image processing
                 QApplication.processEvents()
+
+            # if button is paused; disable/pause
+            if self.scanImagesButton.text() == "Scan":
+                self.imageScannerGroupbox.setEnabled(False)
+                self.imageInputGroupbox.setEnabled(False)
+                self.imageViewerGroupbox.setEnabled(False)
+                return
+        self.imageViewerGroupbox.setEnabled(True)
+        image_index = 0
 
     def create_model(self):
         print("Creating Model....")

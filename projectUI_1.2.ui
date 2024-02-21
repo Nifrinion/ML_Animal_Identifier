@@ -795,7 +795,7 @@ QPushButton:hover {
        <string>Scan</string>
       </property>
      </widget>
-     <widget class="QGroupBox" name="FileViewer">
+     <widget class="QGroupBox" name="imageViewerGroupbox">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -834,14 +834,14 @@ margin:10px
             }</string>
       </property>
       <property name="title">
-       <string>Image Viewer</string>
+       <string>Data Viewer</string>
       </property>
       <widget class="QLabel" name="fullImageLabel">
        <property name="geometry">
         <rect>
          <x>30</x>
          <y>30</y>
-         <width>361</width>
+         <width>261</width>
          <height>171</height>
         </rect>
        </property>
@@ -955,16 +955,16 @@ QLabel:disabled {
       <widget class="QLabel" name="imageStatus">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>120</y>
-         <width>101</width>
+         <x>300</x>
+         <y>110</y>
+         <width>221</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
+         <pointsize>9</pointsize>
         </font>
        </property>
        <property name="text">
@@ -974,35 +974,35 @@ QLabel:disabled {
       <widget class="QLabel" name="imageLocation">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>180</y>
-         <width>101</width>
+         <x>300</x>
+         <y>170</y>
+         <width>261</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
+         <pointsize>9</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>File Location:</string>
+        <string>File:</string>
        </property>
       </widget>
       <widget class="QLabel" name="imageClass">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>140</y>
-         <width>101</width>
+         <x>300</x>
+         <y>130</y>
+         <width>221</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
+         <pointsize>9</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1012,16 +1012,16 @@ QLabel:disabled {
       <widget class="QLabel" name="imageConfidence">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>160</y>
-         <width>101</width>
+         <x>300</x>
+         <y>150</y>
+         <width>221</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
+         <pointsize>9</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1031,9 +1031,9 @@ QLabel:disabled {
       <widget class="QSlider" name="imageSlider">
        <property name="geometry">
         <rect>
-         <x>410</x>
-         <y>40</y>
-         <width>131</width>
+         <x>300</x>
+         <y>30</y>
+         <width>251</width>
          <height>51</height>
         </rect>
        </property>
@@ -1086,7 +1086,7 @@ QAbstractSlider::handle:hover {
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QGroupBox" name="filePathsGroupbox">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1811,7 +1811,7 @@ QPushButton:hover {
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="QGroupBox" name="imageScannerGroupbox">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1935,7 +1935,7 @@ QLabel:disabled {
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="imageInputGroupbox">
       <property name="enabled">
        <bool>false</bool>
       </property>
