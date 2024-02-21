@@ -1,34 +1,33 @@
+import math
+import shutil
 import sys
-
 import numpy as np
 import os
 import cv2 as cv
 import matplotlib.pyplot as plt
-from tensorflow.keras import datasets
-from tensorflow.keras import layers
-from tensorflow.keras import models
+from tensorflow.keras import layers, models
 import tkinter as tk
-from tkinter import ttk
 from tkinter import filedialog
-from PIL import ImageTk, Image
 from PyQt5.QtWidgets import *
-from PyQt5 import uic,  QtGui
+from PyQt5 import uic, QtGui
 from PyQt5.QtGui import QPixmap, QImage
-
+from PyQt5.QtWidgets import QApplication, QMainWindow
+import time
+from PIL import ImageTk, Image
 
 filepaths = []
 current_image_index = 0
 image_index = 0
-total_images = 0
-input_folder = r'C:\Users\User\Desktop\Animals'
-output_folder = ""
-dataset_path = r'C:\Users\User\Desktop\Dataset\Images'
+total_images = 1
+input_folder = r'C:\Users\User\PycharmProjects\pythonProject1\InputData'
+output_folder = r'C:\Users\User\PycharmProjects\pythonProject1\OutputData'
+dataset_path = r'C:\Users\User\PycharmProjects\pythonProject1\Dataset\Images'
 images = []
 labels = []
 class_names = []
 image_data_list = []
 model = models.load_model('image_classifier.model')
-
+model_name = 'image_classifier'
 
 class MyGui(QMainWindow):
 
@@ -38,15 +37,31 @@ class MyGui(QMainWindow):
 
         self.show()
 
+        self.closeEvent = self.close_program
+
         self.imageStatus.setText("0/0")
         self.thumbnailStatus.setText("0/0")
-        self.scanProgressBar.setValue(0)
+        self.outputEntry.setText(output_folder)
+        self.loadModelEntry.setText(model_name)
         self.load_images_labels()
-        self.outputFolderButton.clicked.connect(self.say)
+        self.outputFolderButton.clicked.connect(self.load_output_folder)
         self.loadImageButton.clicked.connect(self.load_images_from_folder)
         self.scanImagesButton.clicked.connect(self.scan_images)
-        self.prevImageButton.clicked.connect(self.prev_image)
-        self.nextImageButton.clicked.connect(self.next_image)
+
+        global progress_bar
+        progress_bar = QProgressBar()
+        progress_bar.setMinimum(0)
+        progress_bar.setMaximum(100)
+        spacer = QWidget()
+        spacer.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+
+
+        self.statusbar.addWidget(spacer)
+        self.statusbar.addWidget(progress_bar)
+        self.statusbar.setStyleSheet("background-color: #BF4E30;")
+
+        progress_bar.setValue(0)
+        self.statusbar.showMessage("Ready")
 
     def create_image_info(self, image_no, classification, confidence_score, file_location):
         image_info = {
@@ -63,22 +78,24 @@ class MyGui(QMainWindow):
     def load_images_from_folder(self):
         global filepaths
         global total_images
+        global input_folder
         filepaths.clear()
         folder_path = filedialog.askdirectory()
         if folder_path:
+            self.loadImagesEntry.setText(folder_path)
+            input_folder = folder_path
             file_names = os.listdir(folder_path)
             filepaths = [os.path.join(folder_path, file) for file in file_names if
                          file.lower().endswith(('.jpg', '.jpeg', '.png'))]
             if filepaths:
                 total_images = len(filepaths)
                 print(f"Total images: {total_images}")
+                self.scanImagesButton.setEnabled(True)
             else:
                 print("No images in selected folder")
 
     def next_image(self):
         global current_image_index
-        global image_data_list
-        print(image_data_list[0]["classification"])
         current_image_index = (current_image_index + 1) % len(filepaths)
         self.display_image()
 
@@ -89,22 +106,42 @@ class MyGui(QMainWindow):
 
     def display_image(self):
         print(current_image_index)
+        print(image_index)
+        bar_value = math.floor(((image_index + 1) / total_images) * 100)
+        progress_bar.setValue(bar_value)
+        print(total_images)
         self.imageStatus.setText(str(current_image_index+1)+"/"+str(total_images))
         self.imageClass.setText(f'Classification: {image_data_list[current_image_index]["classification"]}')
         self.imageConfidence.setText(f'Confidence: {image_data_list[current_image_index]["confidence_score"]}')
         self.imageLocation.setText(f'File Location: {image_data_list[current_image_index]["file_location"]}')
 
+        self.thumbnailStatus.setText(str(image_index)+"/"+str(total_images))
+        self.thumbnailClass.setText(f'Classification: {image_data_list[image_index-1]["classification"]}')
+        #self.thumbnailConfidence.setText(f'Confidence: {image_data_list[image_index]["confidence_score"]}')
+
         if filepaths and current_image_index < len(filepaths):
+            image_scan = Image.open(filepaths[image_index-1])
+            image_scan.thumbnail((260, 260))
+            image_byte_array_scan = image_scan.convert("RGBA").tobytes("raw", "RGBA")
+            pixmap_scan = QtGui.QPixmap.fromImage(
+                QtGui.QImage(image_byte_array_scan, image_scan.size[0], image_scan.size[1],
+                             QtGui.QImage.Format_RGBA8888))
+            self.scanFullImageLabel.setPixmap(pixmap_scan)
+            image_scan.thumbnail((96, 96))
+            image_byte_array_scan = image_scan.convert("RGBA").tobytes("raw", "RGBA")
+            pixmap_scan = QtGui.QPixmap.fromImage(
+                QtGui.QImage(image_byte_array_scan, image_scan.size[0], image_scan.size[1],
+                             QtGui.QImage.Format_RGBA8888))
+            self.scanThumbnailImageLabel.setPixmap(pixmap_scan)
+
             image_original = Image.open(filepaths[current_image_index])
-            image_original.thumbnail((256, 256))
+            image_original.thumbnail((360, 360))
             # convert image to byte array for the QPixmap
             image_byte_array = image_original.convert("RGBA").tobytes("raw", "RGBA")
             pixmap = QtGui.QPixmap.fromImage(
                 QtGui.QImage(image_byte_array, image_original.size[0], image_original.size[1],
                              QtGui.QImage.Format_RGBA8888))
             self.fullImageLabel.setPixmap(pixmap)
-            if current_image_index == 0:
-                self.scanFullImageLabel.setPixmap(pixmap)
         else:
             print("No image to display or index out of range")
 
@@ -132,10 +169,23 @@ class MyGui(QMainWindow):
     def load_model(self):
         global model
         model = models.load_model('image_classifier.model')
+
+    def load_output_folder(self):
+        global output_folder
+        output_folder = filedialog.askdirectory()
+
     def scan_images(self):
         global image_index
         global image_data_list
-        folder_path = r'C:\Users\User\Desktop\Animals'
+        global input_folder
+        global output_folder
+        global class_names
+        if class_names:
+            for class_name in class_names:
+                class_folder = os.path. join(output_folder, class_name)
+                os.makedirs(class_folder, exist_ok=True)
+                print(f"Created folder: {class_folder}")
+        folder_path = input_folder
         for filename in os.listdir(folder_path):
             if filename.endswith('.jpg') or filename.endswith('.jpeg') or filename.endswith('.png'):
                 image_index = image_index + 1
@@ -158,7 +208,15 @@ class MyGui(QMainWindow):
                 print(image)
 
                 print(f'Prediction: {class_names[index]}, Confidence Score: {confidence_score}')
-            self.display_image()
+                shutil.copy(img_path, os.path.join(output_folder, class_names[index]))
+
+                self.display_image()
+
+                # Pause for a short duration to observe the image (optional)
+                time.sleep(.01)
+                # Allow the event loop to process GUI events
+                QApplication.processEvents()
+
     def create_model(self):
         print("Creating Model....")
         model = models.Sequential()
@@ -195,14 +253,10 @@ class MyGui(QMainWindow):
 
     def close_program(self):
         # make sure to change this later; you dont want to close the program mid process ...
+        QApplication.quit()
         sys.exit(0)
-
 
 app = QApplication([])
 window = MyGui()
 window.load_model()  # Call load_model before accessing image_data_list
 app.exec_()
-
-
-
-
