@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>667</height>
+    <width>822</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
-    <height>1000</height>
+    <width>822</width>
+    <height>768</height>
    </size>
   </property>
   <property name="palette">
@@ -149,12 +149,15 @@
     </palette>
    </property>
    <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>601</width>
-      <height>601</height>
+      <width>781</width>
+      <height>701</height>
      </rect>
     </property>
     <property name="palette">
@@ -580,8 +583,8 @@ QTabBar::tab:selected {
       </property>
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>30</y>
+        <x>570</x>
+        <y>20</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -802,8 +805,8 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>300</y>
-        <width>571</width>
+        <y>400</y>
+        <width>751</width>
         <height>231</height>
        </rect>
       </property>
@@ -976,7 +979,7 @@ QLabel:disabled {
         <rect>
          <x>300</x>
          <y>170</y>
-         <width>261</width>
+         <width>431</width>
          <height>16</height>
         </rect>
        </property>
@@ -1033,7 +1036,7 @@ QLabel:disabled {
         <rect>
          <x>300</x>
          <y>30</y>
-         <width>251</width>
+         <width>421</width>
          <height>51</height>
         </rect>
        </property>
@@ -1817,10 +1820,10 @@ QPushButton:hover {
       </property>
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>80</y>
+        <x>510</x>
+        <y>140</y>
         <width>251</width>
-        <height>231</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -1943,8 +1946,8 @@ QLabel:disabled {
        <rect>
         <x>10</x>
         <y>140</y>
-        <width>321</width>
-        <height>171</height>
+        <width>501</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -1981,8 +1984,8 @@ margin:10px
         <rect>
          <x>30</x>
          <y>30</y>
-         <width>261</width>
-         <height>111</height>
+         <width>441</width>
+         <height>211</height>
         </rect>
        </property>
        <property name="palette">
@@ -2093,8 +2096,96 @@ QLabel:disabled {
        </property>
       </widget>
      </widget>
+     <widget class="QSlider" name="confidenceSlider">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>50</y>
+        <width>251</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QAbstractSlider {
+    background-color: none; /* Background color */
+    border: 0px solid #CCCCCC; /* Border color */
+    border-radius: 5px; /* Border radius */
+	height: 20px;
+}
+
+QAbstractSlider::groove {
+    background-color: #b0aa96; /* Groove color */
+	height: 6px;
+}
+
+QAbstractSlider::groove:disabled {
+    background-color: #gray; /* Groove color */
+}
+
+QAbstractSlider::handle {
+    background-color: #bf4e30; /* Handle color */
+    border: 0px solid #005F7F; /* Handle border color */
+    width: 10px; /* Handle width */
+    margin: -6px 0; /* Handle margin to center vertically */
+    border-radius: 15px; /* Handle border radius */
+}
+QAbstractSlider::handle:disabled {
+    background-color: darkgray;
+
+}
+QAbstractSlider::handle:hover {
+    background-color: #0096FF; /* Handle color on hover */
+}
+
+
+</string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="pageStep">
+       <number>13</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="confidenceLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>80</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Confidence Threshold:</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <attribute name="title">
       <string>Dataset Settings</string>
      </attribute>
@@ -2125,29 +2216,19 @@ QLabel:disabled {
       </property>
      </widget>
      <widget class="QPushButton" name="trainModelButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
-        <x>15</x>
+        <x>10</x>
         <y>50</y>
-        <width>71</width>
+        <width>81</width>
         <height>20</height>
        </rect>
       </property>
       <property name="text">
        <string>Train Model</string>
-      </property>
-     </widget>
-     <widget class="QProgressBar" name="trainingProgressBar">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>80</y>
-        <width>118</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>24</number>
       </property>
      </widget>
      <widget class="QLineEdit" name="modelNameEntry">
