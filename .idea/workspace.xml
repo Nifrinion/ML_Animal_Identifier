@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3e0cb50-b0e1-4ffd-9eff-faa6637ab5d5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/01439d37d272cf17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/019395373d75e44a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/06d70ecda37db5e3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/0709eb8e8c2d19fa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/077180805a0583e4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/07ba0d913b713682.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/097690a43a1768cb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/0e44531f622a8144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/102d76f8b798eaec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/12c3bf86b5335231.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/15b725b119cc1202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/1acc629bbf3034a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/2c5531f7f0e26f51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/2dbcc7089b5d193c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/30f53cd8b33d175f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/34f7030f1a9eb95f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/388a81f301ab32bc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/3aff4b30230d6c81.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/43ffc4b4b9fb51a3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/4a230745d9802d75.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/5387aa0e2ce4b45f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/554d4ef3b68d6881.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/57c6dbadc2b1fbf5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/602c892018f75ff1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/60b2123ebab00add.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/60e7d12013b6041d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/640781a14a8c89dd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/6928e7494201ddf0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7003c8f0bd08ce1e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7181a5f0e6153391.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/71db0429c14e2d88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/74f1d413ce532fdd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7942030bae05f205.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7d8bf3ff2ae7948e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7e838bcfab6fd1fb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/7f6e6cc9547cb57c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/808270caae7c498f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/8092bc3b2e4315de.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/83e27a547db64cdb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/8e70d2e64fc063cd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/98f2f1b24c291d5e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/996b97c403958f56.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/a5a331a4eaa9ee53.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/a5d7226d6d43eb33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/aff193d807eca6c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/b755bddf91807c67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/c091628df1091bc9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/c137232242da09ee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/c1da127032a26a86.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/c77d6107489afef7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/d1ade7ef525899ef.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/d3c47da83afb39a6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/d69564524c8608c5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/d76c4164c1a905a7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/da3529ce278a1cd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/de1c6cfb088c838d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/e3f1612df1066fa5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/ef63472df93b9fff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/f11499a0087e453d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/f93bc1be10397a49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/fa51b8026b5fa585.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Bears/fd9d2a6a27174cd2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0060dfb7f9a468b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/00bdb008eb688497.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/02fcc80210b7cd5b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/039beb511fd1e7f7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/03ff0c4a800af9ec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/040983ac9ee15126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0413f9c94df7ebcb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/05455df7c2b08919.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/05798ca4c1946ae1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/05869b6681e12dad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/05ac515445e2b12f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/074524fc2d1b38c5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/07abe45f3aab23b4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/08f564cead06cd33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/09f8e760f60df0da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0a563d05ebab4fe3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0ad3f3375816f9ed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0be5876ff26d9992.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0d2eb362375d5d44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0d46532b8ab95063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0d63660f48902dc5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0ead9cb2bca86202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/0f426802e98a8964.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/105a43452aedeeb7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/116a5833e358d6df.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1431788ff4626a30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/14b32f838a0ed041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/150c3369bfbd0e6f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/151e0d8fc3923605.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/15273d7e0ae873d3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/15fab63c26dd0012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/161a28fbe1153fe2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/16afa69948a220ff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/174d2108eea9b488.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/17de3cf86b72b16e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/192b8cd47f52ac88.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/19301fa614be04e8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1954c2c745b87bfe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1b0366e125f4e3db.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1b6a3a83cb871eca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1daaa601cc9b389f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/1fa8972922aa3134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2225364f47d276d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/226a2d99502cbd32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/24813d483aacbd7e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/249e598921ba7ec3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/258550a1eea28fbb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/25a4fe18be8aa2af.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/261ee9c44b57481c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/289fcf0848ec7da7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/28bd6c6b1050e055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2a73fb26a736da09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2b2a3421dbd23389.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2ca2d110708d96b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2ce8d86313032f1e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2d6ca3bfb69477e9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2e4831cdf0b4ce1e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2e49ef1ef93f6fd6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2e4c05414ad28ded.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2e8edb16c6a09beb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2eaf88629e80fb7b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2ed000d799794d71.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/2fb1a38610ed6936.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/31a34ba7f715e15d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3206ae83e17a8cb5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/32dca7a4669c8812.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/32dd1511ede69117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/33975be2bc5080a2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/341bafa58d2d369e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/355c03cb2c4817df.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/387cbe09952f46cf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3a15e1a76f9b3ae3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3c36b35792077022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3d67b7c7f6a0ca2a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3d7c1992e44fa547.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3e43762f12c201ec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3f202743f4e65bcf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3f244d0cd047e3b7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/3fca942352af44dc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4012fbff59fd6d8d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/414418e52ae4dcc7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/416262b5ff2b64c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/41e12130140fc5b9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/43293d56f1e626e2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/438118dbd16f942f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/43b91aa35019ffb6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/44221f31a243f493.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/446924d9efea3ada.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/44f6da86951211ce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/458e1a8fc27f2461.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4615c0c9192d1f4f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/466c6ce044b8bd46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/479b1ea3d61d4035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/47a14ab6827ba4cb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/47b473b5a366327d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/47d14d071bcb8d11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4808fab1abe1746f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/48adfd99718908ce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/49d2d0f4ef95426d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/49fe94c183f65ff0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4a3e33610182a969.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4aa41977cb5e31c7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4aa4edb45d204d96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4abc9ad5fc89e76d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4acc620e57f1e5e9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4dcfcc8dad2ff2c4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4e7b44f46cd2562a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4eb49a1163a8a453.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/4f2643f408eac96c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/51a0d12e084aeced.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5226b8e2a7963878.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5238ad86de44ceb8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/525b7ee376f6107e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/53e326371baf4994.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/54deb55282cd961c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/56a1e9f45b126934.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/57addecba478c684.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/57d982ed20ab1861.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/59987a562d6187c6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5be7cdc013e0dbb8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5c0bd2aa437872b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5d0595903ab095e4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5e8b26ca06d6d575.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5f00a5374d672098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5f023c2df96a9af4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/5f805386c523fa54.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6114d8024056b77c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6119ed497b55ff2c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6148de607e99704f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6184a6312c1daca2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/61b0d3b5611efb84.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/61c1c5aabc962e28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/61d4eb71d72c4ca1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/635b80599133b2dc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/63a3246b8a551a29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/63ec60d943f43b72.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/64340d2d41dbf06c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/64e7507b1da3b67b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/65933ff9b5f41ce6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6713ab29a7f1156b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6818123481318b16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/68dd8865ab4c3574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/69939236d145db98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6ad3d3e6690da1c8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6b1e9aed6021312a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6b5935e540d042bd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6c2f1ac84fe56cac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6c3cdb32cbdc1d0e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6d172bf08dd36382.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6e7cbc79462cae83.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/6f0c154b69786d9d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/704c4297ceaeba64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/707742c71cffd0ac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/70d084caffbe49bb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/7148fe6b6643b939.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/71c372c116641116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/725c0e19be06f381.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/728ea9b7937f0588.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/73c8ac6133bfa349.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/76a92d281ee4bfc0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/7b082f7da69e2859.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/828730b85c55e4ba.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/864c89394ddef8a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/877143d4956ef2dc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/87a7bf1a87f35c7f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/8e039c46050a4440.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/8e4074b076d59c5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/95d362796d426c6d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/9617a823ebb6ed65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/97a73a0bb5d24ed8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/99b3d74916f5ccda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/9b507a180abd1c0a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/9fc1d035c7b422ea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/a23c8951dc4fe78a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/a5c88f3fd6ed0c54.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/ab59703165cd4e16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/b16abb313f3e4210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/b1a30c5d499d3030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/b32c6db57efbee78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/b572a2570265c6fa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/bde4437fad96b602.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/c0ac2ca28405f992.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/cc2a3e52994f7b80.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/ce4ce5cab81c0672.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/d0fe01a71f83d22d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/d3831aa42d49c77f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/d48da3382d52ca0f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/d7d683edcdd38bb7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/db9141ef7f802d96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/dcd6993b977ba930.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/e039a6b738ffea33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/e085ba0bdc704f78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/e7ea5d1b4c9e7a76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/e9474ed1086b1563.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/f1289343e71bddfb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/f360fb54d886b791.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/f9c53269b24546b3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/fc2477610db9edb0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/fcffba814efde365.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData/Validation/Cats/fe38d52f824108dc.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2cqPLueqooqgQ7pHptbIX3rBSyL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3e0cb50-b0e1-4ffd-9eff-faa6637ab5d5" name="Changes" comment="" />
+      <created>1708836084021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708836084021</updated>
+    </task>
+    <servers />
+  </component>
+</project>
